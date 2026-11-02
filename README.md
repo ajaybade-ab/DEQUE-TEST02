@@ -11,6 +11,8 @@ Each broken spot has an `<!-- ISSUE: rule-id -->` comment naming the expected ax
 | `index.html`, `pages/*.html` | Static pages full of violations. Test them with the axe browser extension or a crawler. |
 | `accessible.html` | Control page. It should produce **zero** automated violations. |
 | `stories/*.stories.js` | Storybook stories. Each area has a `Broken` and a `Fixed` story. Chromatic tests these. |
+| `src/components/` | Reusable UI components (see below). Each takes an `accessible` option. |
+| `stories/components/` | Stories for each component, including an `Inaccessible` story. |
 | `data/test-data.json` | Random but reproducible users and bookings, used by the tables. |
 | `scripts/generate-data.mjs` | Regenerates the data: `npm run generate-data -- 123` (the number is the seed). |
 | `.github/workflows/chromatic.yml` | Publishes Storybook to Chromatic on every push and pull request. |
@@ -36,6 +38,22 @@ npm run serve       # static pages at http://localhost:8080
 `.storybook/preview.js` sets `a11y.test: 'error'`, so every `Broken` story should fail its
 accessibility check and every `Fixed` story should pass. Change it to `'todo'` if you want
 violations reported as warnings instead.
+
+## Components
+
+Plain JavaScript (no framework), in Storybook under **Components/**. Every accessible story passes axe;
+every `Inaccessible` story fails it on purpose.
+
+| Component | Accessible version | `Inaccessible` story fails on |
+|---|---|---|
+| Charts (stacked area) | Named figure, legend, hover tooltip, data table | `svg-img-alt`; legend is colour only |
+| LineGraph | Same, with labelled reference lines | `svg-img-alt` |
+| Histogram | Same, bins computed from booking fares | `svg-img-alt` |
+| Cascade | Labelled list of horizontal bars with values | `listitem`, `color-contrast` |
+| Badge | Icon + text, AA-contrast colours | `color-contrast` |
+| UserItem | Decorative avatar with `alt=""`, optional tier badge | `image-alt`, `color-contrast` |
+| Treeview | ARIA tree, arrow keys / Home / End / Enter | `aria-allowed-attr`; not keyboard reachable |
+| DatePicker | Range picker, grid with arrow / PageUp / PageDown keys, live status | `color-contrast`; unnamed, non-focusable controls |
 
 ## Planted issues by page
 
