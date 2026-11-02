@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- ISSUE: meta-refresh — page auto-refreshes -->
+  <meta http-equiv="refresh" content="300">
+  <title>Media - Acme Travel</title>
+  <link rel="stylesheet" href="../assets/styles.css">
+</head>
+<body>
+  <header class="topbar"><a href="../index.html">Home</a></header>
+  <main>
+    <h1>Destination videos</h1>
+
+    <!-- ISSUE: video-caption — no captions track; autoplay with no controls -->
+    <video src="https://interactive-examples.mdn.mozilla.net/media/cc0-videos/flower.mp4" width="320" autoplay muted loop></video>
+
+    <!-- ISSUE: no-autoplay-audio — audio autoplays without controls -->
+    <audio src="https://interactive-examples.mdn.mozilla.net/media/cc0-audio/t-rex-roar.mp3" autoplay loop></audio>
+
+    <!-- ISSUE: video with controls but no captions or transcript -->
+    <video controls width="320">
+      <source src="https://interactive-examples.mdn.mozilla.net/media/cc0-videos/flower.webm" type="video/webm">
+    </video>
+
+    <!-- ISSUE: frame-title — embedded iframe without title -->
+    <iframe src="contrast.html" width="320" height="120"></iframe>
+
+    <!-- ISSUE: flashing/animated content with no pause control -->
+    <div id="flash" style="width:120px;height:40px;background:#e63946"></div>
+  </main>
+  <script>
+    var on = false;
+    setInterval(function () {
+      on = !on;
+      document.getElementById('flash').style.background = on ? '#ffffff' : '#e63946';
+    }, 200);
+  </script>
+</body>
+</html>

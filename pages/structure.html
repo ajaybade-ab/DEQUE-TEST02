@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<!-- ISSUE: html-lang-valid — invalid lang value -->
+<html lang="english">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- ISSUE: document-title — empty title -->
+  <title></title>
+  <link rel="stylesheet" href="../assets/styles.css">
+</head>
+<body>
+  <!-- ISSUE: landmark-no-duplicate-banner / landmark-banner-is-top-level -->
+  <header class="topbar"><a href="../index.html">Home</a></header>
+  <header><p>Secondary banner</p></header>
+
+  <!-- ISSUE: landmark-unique — two navs with no distinguishing label -->
+  <nav><a href="forms.html">Forms</a> | <a href="images.html">Images</a></nav>
+  <nav><a href="tables.html">Tables</a> | <a href="aria.html">ARIA</a></nav>
+
+  <!-- ISSUE: landmark-no-duplicate-main -->
+  <main>
+    <h1>Travel guide</h1>
+    <!-- ISSUE: heading-order — skips h2, h3 straight to h5 -->
+    <h5>Packing tips</h5>
+    <p>Roll your clothes, pack a reusable bottle, and keep a copy of your passport.</p>
+
+    <!-- ISSUE: empty-heading -->
+    <h2></h2>
+
+    <!-- ISSUE: fake heading — styled text instead of a heading element -->
+    <div style="font-size:24px;font-weight:bold">Visa requirements</div>
+    <p>Check the embassy website at least 8 weeks before departure.</p>
+
+    <!-- ISSUE: list — ul containing non-li children -->
+    <ul>
+      <div>Passport</div>
+      <li>Boarding pass</li>
+      <p>Travel insurance</p>
+    </ul>
+
+    <!-- ISSUE: listitem — li outside of a list -->
+    <li>Orphan list item</li>
+
+    <!-- ISSUE: definition-list — dl containing invalid children -->
+    <dl>
+      <dt>Layover</dt>
+      <p>A stop between flights.</p>
+    </dl>
+
+    <!-- ISSUE: frame-title — iframe without title -->
+    <iframe src="tables.html" width="400" height="150"></iframe>
+
+    <!-- ISSUE: valid-lang — invalid lang on element -->
+    <p lang="xx-fake">Bon voyage!</p>
+
+    <!-- ISSUE: blink/marquee style motion -->
+    <marquee>Flash sale ends at midnight!</marquee>
+  </main>
+  <main><p>Second main region.</p></main>
+
+  <!-- ISSUE: region — content outside any landmark -->
+  <p>Customer service: 1-800-555-0199</p>
+</body>
+</html>

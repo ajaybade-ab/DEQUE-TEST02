@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Accessible baseline - Acme Travel</title>
+  <link rel="stylesheet" href="assets/styles.css">
+</head>
+<body>
+  <!-- This page is the control: it should produce ZERO automated violations. -->
+  <a class="skip-link" href="#content">Skip to main content</a>
+  <header class="topbar">
+    <img src="assets/logo.svg" alt="Acme Travel">
+    <nav aria-label="Primary">
+      <a href="index.html">Home</a>
+      <a href="pages/forms.html">Book a flight</a>
+    </nav>
+  </header>
+  <main id="content">
+    <h1>Book a flight</h1>
+    <form>
+      <p><label for="name">Full name</label><br>
+        <input id="name" name="name" type="text" autocomplete="name" required aria-required="true"></p>
+      <p><label for="email">Email address</label><br>
+        <input id="email" name="email" type="email" autocomplete="email" required aria-describedby="email-hint">
+        <br><span id="email-hint">We'll send your e-ticket here.</span></p>
+      <fieldset>
+        <legend>Cabin class</legend>
+        <input type="radio" id="eco" name="cabin" value="economy" checked><label for="eco">Economy</label>
+        <input type="radio" id="bus" name="cabin" value="business"><label for="bus">Business</label>
+      </fieldset>
+      <p><button type="submit">Search flights</button></p>
+    </form>
+
+    <h2>Upcoming bookings</h2>
+    <table>
+      <caption>Your next three trips</caption>
+      <thead><tr><th scope="col">Booking</th><th scope="col">Route</th><th scope="col">Status</th></tr></thead>
+      <tbody>
+        <tr><td>BK-482913</td><td>JFK to LIS</td><td>Confirmed</td></tr>
+        <tr><td>BK-117420</td><td>LHR to HND</td><td>Pending</td></tr>
+        <tr><td>BK-903311</td><td>CDG to SIN</td><td>Cancelled</td></tr>
+      </tbody>
+    </table>
+
+    <h2>Gallery</h2>
+    <figure>
+      <img src="assets/photo.svg" width="200" alt="Two blue mountain peaks under a yellow sun">
+      <figcaption>Patagonia at midday</figcaption>
+    </figure>
+  </main>
+  <footer><p>&copy; 2026 Acme Travel</p></footer>
+</body>
+</html>

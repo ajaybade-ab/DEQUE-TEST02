@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Tables - Acme Travel</title>
+  <link rel="stylesheet" href="../assets/styles.css">
+</head>
+<body>
+  <header class="topbar"><a href="../index.html">Home</a></header>
+  <main>
+    <h1>Bookings</h1>
+
+    <!-- ISSUE: data table with no <th>, no caption — headers styled with bold only -->
+    <table>
+      <tr style="font-weight:bold;background:#f0f0f0">
+        <td>Booking ID</td><td>Passenger</td><td>Route</td><td>Date</td><td>Status</td><td>Fare</td>
+      </tr>
+      <tbody id="bookings-body"></tbody>
+    </table>
+
+    <!-- ISSUE: td-headers-attr — headers attribute references missing ids -->
+    <h2>Loyalty members</h2>
+    <table>
+      <tr><th id="m-name">Name</th><th id="m-tier">Tier</th><th id="m-points">Points</th></tr>
+      <tbody id="members-body"></tbody>
+    </table>
+
+    <!-- ISSUE: empty-table-header -->
+    <h2>Fare summary</h2>
+    <table>
+      <tr><th></th><th>Economy</th><th>Business</th></tr>
+      <tr><td>Base fare</td><td>$420</td><td>$1,980</td></tr>
+      <tr><td>Taxes</td><td>$88</td><td>$212</td></tr>
+    </table>
+
+    <!-- ISSUE: layout table with th (layout table treated as data) -->
+    <table>
+      <tr><th><img src="../assets/logo.svg" alt="Acme Travel"></th><th>Contact us 24/7</th></tr>
+    </table>
+
+    <!-- ISSUE: scope-attr-valid — invalid scope -->
+    <table>
+      <tr><th scope="column">Airport</th><th scope="column">Code</th></tr>
+      <tr><td>Heathrow</td><td>LHR</td></tr>
+    </table>
+  </main>
+
+  <script src="../data/test-data.js"></script>
+  <script>
+    var tb = document.getElementById('bookings-body');
+    TEST_DATA.bookings.forEach(function (b) {
+      var tr = document.createElement('tr');
+      // Status conveyed by color only
+      var color = b.status === 'Confirmed' ? '#0a0' : b.status === 'Cancelled' ? '#e00' : '#d90';
+      tr.innerHTML = '<td>' + b.id + '</td><td>' + b.passenger + '</td><td>' + b.from + ' → ' + b.to +
+        '</td><td>' + b.date + '</td><td><span style="display:inline-block;width:12px;height:12px;border-radius:50%;background:' +
+        color + '"></span></td><td>$' + b.fare + '</td>';
+      tb.appendChild(tr);
+    });
+
+    var mb = document.getElementById('members-body');
+    TEST_DATA.users.slice(0, 8).forEach(function (u) {
+      var tr = document.createElement('tr');
+      tr.innerHTML = '<td headers="name">' + u.name + '</td><td headers="tier">' + u.tier +
+        '</td><td headers="pts">' + u.points + '</td>';
+      mb.appendChild(tr);
+    });
+  </script>
+</body>
+</html>

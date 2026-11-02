@@ -1,0 +1,386 @@
+{
+  "users": [
+    {
+      "id": "U1000",
+      "name": "Diego García",
+      "email": "diego.garcia@example.com",
+      "phone": "+1-555-867-7027",
+      "tier": "Blue",
+      "points": 131648
+    },
+    {
+      "id": "U1001",
+      "name": "Noah Haddad",
+      "email": "noah.haddad@example.com",
+      "phone": "+1-555-878-5250",
+      "tier": "Blue",
+      "points": 220515
+    },
+    {
+      "id": "U1002",
+      "name": "Ravi Müller",
+      "email": "ravi.muller@example.com",
+      "phone": "+1-555-277-5506",
+      "tier": "Gold",
+      "points": 152655
+    },
+    {
+      "id": "U1003",
+      "name": "Aarav García",
+      "email": "aarav.garcia@example.com",
+      "phone": "+1-555-853-1460",
+      "tier": "Gold",
+      "points": 7884
+    },
+    {
+      "id": "U1004",
+      "name": "Noah Sharma",
+      "email": "noah.sharma@example.com",
+      "phone": "+1-555-267-8051",
+      "tier": "Gold",
+      "points": 6780
+    },
+    {
+      "id": "U1005",
+      "name": "Lucas Rossi",
+      "email": "lucas.rossi@example.com",
+      "phone": "+1-555-538-8281",
+      "tier": "Silver",
+      "points": 112474
+    },
+    {
+      "id": "U1006",
+      "name": "Aarav Sharma",
+      "email": "aarav.sharma@example.com",
+      "phone": "+1-555-600-6370",
+      "tier": "Blue",
+      "points": 161424
+    },
+    {
+      "id": "U1007",
+      "name": "Fatima Müller",
+      "email": "fatima.muller@example.com",
+      "phone": "+1-555-764-8728",
+      "tier": "Gold",
+      "points": 51047
+    },
+    {
+      "id": "U1008",
+      "name": "Noah Müller",
+      "email": "noah.muller@example.com",
+      "phone": "+1-555-167-6938",
+      "tier": "Gold",
+      "points": 173272
+    },
+    {
+      "id": "U1009",
+      "name": "Mateo Chen",
+      "email": "mateo.chen@example.com",
+      "phone": "+1-555-949-4880",
+      "tier": "Platinum",
+      "points": 34324
+    },
+    {
+      "id": "U1010",
+      "name": "Mei Sharma",
+      "email": "mei.sharma@example.com",
+      "phone": "+1-555-424-5335",
+      "tier": "Gold",
+      "points": 224890
+    },
+    {
+      "id": "U1011",
+      "name": "Mei O'Brien",
+      "email": "mei.o.brien@example.com",
+      "phone": "+1-555-941-3504",
+      "tier": "Gold",
+      "points": 44905
+    },
+    {
+      "id": "U1012",
+      "name": "Amara Rossi",
+      "email": "amara.rossi@example.com",
+      "phone": "+1-555-208-9960",
+      "tier": "Gold",
+      "points": 229030
+    },
+    {
+      "id": "U1013",
+      "name": "Sofia Haddad",
+      "email": "sofia.haddad@example.com",
+      "phone": "+1-555-403-6366",
+      "tier": "Silver",
+      "points": 182354
+    },
+    {
+      "id": "U1014",
+      "name": "Noah García",
+      "email": "noah.garcia@example.com",
+      "phone": "+1-555-858-7255",
+      "tier": "Platinum",
+      "points": 222550
+    },
+    {
+      "id": "U1015",
+      "name": "Sofia Tanaka",
+      "email": "sofia.tanaka@example.com",
+      "phone": "+1-555-366-1907",
+      "tier": "Gold",
+      "points": 78326
+    },
+    {
+      "id": "U1016",
+      "name": "Zanele Johansson",
+      "email": "zanele.johansson@example.com",
+      "phone": "+1-555-184-5278",
+      "tier": "Platinum",
+      "points": 32494
+    },
+    {
+      "id": "U1017",
+      "name": "Hana Silva",
+      "email": "hana.silva@example.com",
+      "phone": "+1-555-738-7297",
+      "tier": "Blue",
+      "points": 103215
+    },
+    {
+      "id": "U1018",
+      "name": "Lucas Kowalski",
+      "email": "lucas.kowalski@example.com",
+      "phone": "+1-555-402-2862",
+      "tier": "Gold",
+      "points": 221720
+    },
+    {
+      "id": "U1019",
+      "name": "Priya Rossi",
+      "email": "priya.rossi@example.com",
+      "phone": "+1-555-453-2182",
+      "tier": "Platinum",
+      "points": 92427
+    },
+    {
+      "id": "U1020",
+      "name": "Aarav O'Brien",
+      "email": "aarav.o.brien@example.com",
+      "phone": "+1-555-671-8883",
+      "tier": "Platinum",
+      "points": 52247
+    },
+    {
+      "id": "U1021",
+      "name": "Diego García",
+      "email": "diego.garcia@example.com",
+      "phone": "+1-555-265-1427",
+      "tier": "Gold",
+      "points": 177093
+    },
+    {
+      "id": "U1022",
+      "name": "Noah Okafor",
+      "email": "noah.okafor@example.com",
+      "phone": "+1-555-402-1261",
+      "tier": "Blue",
+      "points": 248381
+    },
+    {
+      "id": "U1023",
+      "name": "Diego Patel",
+      "email": "diego.patel@example.com",
+      "phone": "+1-555-247-2537",
+      "tier": "Gold",
+      "points": 73126
+    },
+    {
+      "id": "U1024",
+      "name": "Sofia García",
+      "email": "sofia.garcia@example.com",
+      "phone": "+1-555-476-7175",
+      "tier": "Silver",
+      "points": 84030
+    }
+  ],
+  "bookings": [
+    {
+      "id": "BK-591725",
+      "passenger": "Noah García",
+      "from": "YYZ",
+      "to": "HND",
+      "date": "2026-06-17",
+      "status": "Confirmed",
+      "fare": 841
+    },
+    {
+      "id": "BK-725487",
+      "passenger": "Fatima Müller",
+      "from": "HND",
+      "to": "GRU",
+      "date": "2026-03-04",
+      "status": "Confirmed",
+      "fare": 814
+    },
+    {
+      "id": "BK-441937",
+      "passenger": "Hana Silva",
+      "from": "JFK",
+      "to": "SIN",
+      "date": "2026-03-13",
+      "status": "Cancelled",
+      "fare": 1965
+    },
+    {
+      "id": "BK-856337",
+      "passenger": "Noah Okafor",
+      "from": "DXB",
+      "to": "LHR",
+      "date": "2026-11-14",
+      "status": "Pending",
+      "fare": 427
+    },
+    {
+      "id": "BK-591095",
+      "passenger": "Sofia García",
+      "from": "SYD",
+      "to": "BOM",
+      "date": "2026-03-10",
+      "status": "Pending",
+      "fare": 2076
+    },
+    {
+      "id": "BK-252371",
+      "passenger": "Amara Rossi",
+      "from": "YYZ",
+      "to": "GRU",
+      "date": "2026-01-01",
+      "status": "Cancelled",
+      "fare": 1847
+    },
+    {
+      "id": "BK-867667",
+      "passenger": "Noah García",
+      "from": "FRA",
+      "to": "BOM",
+      "date": "2026-08-23",
+      "status": "Pending",
+      "fare": 1122
+    },
+    {
+      "id": "BK-663346",
+      "passenger": "Noah Müller",
+      "from": "YYZ",
+      "to": "GRU",
+      "date": "2026-05-26",
+      "status": "Cancelled",
+      "fare": 439
+    },
+    {
+      "id": "BK-753727",
+      "passenger": "Diego Patel",
+      "from": "CDG",
+      "to": "JFK",
+      "date": "2026-02-18",
+      "status": "Cancelled",
+      "fare": 1166
+    },
+    {
+      "id": "BK-142908",
+      "passenger": "Fatima Müller",
+      "from": "GRU",
+      "to": "LHR",
+      "date": "2026-04-03",
+      "status": "Pending",
+      "fare": 1403
+    },
+    {
+      "id": "BK-699721",
+      "passenger": "Amara Rossi",
+      "from": "GRU",
+      "to": "BOM",
+      "date": "2026-10-05",
+      "status": "Pending",
+      "fare": 1173
+    },
+    {
+      "id": "BK-554137",
+      "passenger": "Aarav Sharma",
+      "from": "DXB",
+      "to": "HND",
+      "date": "2026-04-04",
+      "status": "Pending",
+      "fare": 1355
+    },
+    {
+      "id": "BK-233359",
+      "passenger": "Diego Patel",
+      "from": "SYD",
+      "to": "DXB",
+      "date": "2026-01-31",
+      "status": "Confirmed",
+      "fare": 2101
+    },
+    {
+      "id": "BK-151061",
+      "passenger": "Mateo Chen",
+      "from": "DXB",
+      "to": "SIN",
+      "date": "2026-02-23",
+      "status": "Confirmed",
+      "fare": 1713
+    },
+    {
+      "id": "BK-695080",
+      "passenger": "Priya Rossi",
+      "from": "SIN",
+      "to": "LHR",
+      "date": "2026-12-21",
+      "status": "Pending",
+      "fare": 1949
+    },
+    {
+      "id": "BK-153616",
+      "passenger": "Aarav Sharma",
+      "from": "SIN",
+      "to": "LIS",
+      "date": "2026-01-02",
+      "status": "Cancelled",
+      "fare": 1634
+    },
+    {
+      "id": "BK-404053",
+      "passenger": "Fatima Müller",
+      "from": "SIN",
+      "to": "FRA",
+      "date": "2026-01-11",
+      "status": "Cancelled",
+      "fare": 1329
+    },
+    {
+      "id": "BK-566524",
+      "passenger": "Diego García",
+      "from": "LIS",
+      "to": "FRA",
+      "date": "2026-12-07",
+      "status": "Cancelled",
+      "fare": 1672
+    },
+    {
+      "id": "BK-775225",
+      "passenger": "Sofia Haddad",
+      "from": "SIN",
+      "to": "BOM",
+      "date": "2026-04-13",
+      "status": "Cancelled",
+      "fare": 1370
+    },
+    {
+      "id": "BK-377846",
+      "passenger": "Sofia Tanaka",
+      "from": "SIN",
+      "to": "FRA",
+      "date": "2026-12-21",
+      "status": "Cancelled",
+      "fare": 2088
+    }
+  ]
+}

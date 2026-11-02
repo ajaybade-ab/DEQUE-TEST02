@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<!-- ISSUE: html-has-lang — no lang attribute on <html> -->
+<html>
+<head>
+  <meta charset="utf-8">
+  <!-- ISSUE: meta-viewport — zoom disabled -->
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+  <!-- ISSUE: document-title — no <title> element -->
+  <link rel="stylesheet" href="assets/styles.css">
+</head>
+<body>
+  <!-- ISSUE: region / landmark-one-main — no header/nav/main landmarks -->
+  <div class="topbar">
+    <!-- ISSUE: image-alt — logo has no alt -->
+    <img src="assets/logo.svg">
+    <a href="pages/forms.html">Forms</a>
+    <a href="pages/images.html">Images</a>
+    <a href="pages/contrast.html">Contrast</a>
+    <a href="pages/structure.html">Structure</a>
+    <a href="pages/aria.html">ARIA</a>
+    <a href="pages/tables.html">Tables</a>
+    <a href="pages/keyboard.html">Keyboard</a>
+    <a href="pages/media.html">Media</a>
+    <a href="accessible.html">Accessible baseline</a>
+  </div>
+
+  <!-- ISSUE: page-has-heading-one — no h1, starts at h3 -->
+  <h3>Welcome to Acme Travel</h3>
+  <p>Book flights, hotels and car rentals at the best prices. This site contains intentionally broken
+     accessibility patterns for testing.</p>
+
+  <div class="card">
+    <h4>Featured deals</h4>
+    <!-- ISSUE: link-name — empty link with only an image that has no alt -->
+    <a href="pages/images.html"><img src="assets/photo.svg" width="150"></a>
+    <!-- ISSUE: ambiguous link text -->
+    <p>Flights to Lisbon from $199. <a href="pages/forms.html">Click here</a></p>
+    <p>Hotels in Tokyo from $89/night. <a href="pages/forms.html">Click here</a></p>
+    <!-- ISSUE: link-name — totally empty link -->
+    <a href="pages/tables.html"></a>
+  </div>
+
+  <!-- ISSUE: duplicate-id -->
+  <div id="promo" class="card"><p class="low-contrast">Sign up for our newsletter!</p></div>
+  <div id="promo" class="card"><p class="low-contrast">Download our mobile app!</p></div>
+
+  <div class="tiny-grey">&copy; 2026 Acme Travel. All rights reserved.</div>
+</body>
+</html>

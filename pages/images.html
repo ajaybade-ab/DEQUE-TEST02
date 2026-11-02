@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Images - Acme Travel</title>
+  <link rel="stylesheet" href="../assets/styles.css">
+</head>
+<body>
+  <header class="topbar"><a href="../index.html">Home</a></header>
+  <main>
+    <h1>Destination gallery</h1>
+
+    <!-- ISSUE: image-alt — no alt attribute -->
+    <img src="../assets/photo.svg" width="200">
+
+    <!-- ISSUE: image-redundant-alt / unhelpful alt — filename as alt -->
+    <img src="../assets/photo.svg" width="200" alt="photo.svg">
+
+    <!-- ISSUE: unhelpful alt -->
+    <img src="../assets/photo.svg" width="200" alt="image">
+
+    <!-- ISSUE: image of text — alt does not convey the text -->
+    <p><img src="../assets/banner-text.svg" alt="banner"></p>
+
+    <!-- ISSUE: image-redundant-alt — alt duplicates adjacent text -->
+    <figure>
+      <img src="../assets/photo.svg" width="200" alt="Mountains in Patagonia">
+      <figcaption>Mountains in Patagonia</figcaption>
+    </figure>
+
+    <!-- ISSUE: svg-img-alt — svg with role=img but no accessible name -->
+    <svg role="img" width="60" height="60" viewBox="0 0 60 60">
+      <circle cx="30" cy="30" r="25" fill="#ffb703"/>
+    </svg>
+
+    <!-- ISSUE: role-img-alt — div with role=img and no name -->
+    <div role="img" style="width:120px;height:80px;background:url(../assets/photo.svg) center/cover"></div>
+
+    <!-- ISSUE: input-image-alt — image button without alt -->
+    <form><input type="image" src="../assets/icon-search.svg" style="background:#2b6cb0;padding:6px"></form>
+
+    <!-- ISSUE: area-alt — image map areas with no alt -->
+    <img src="../assets/photo.svg" width="300" height="180" usemap="#regions" alt="Regions map">
+    <map name="regions">
+      <area shape="rect" coords="0,0,150,180" href="forms.html">
+      <area shape="rect" coords="150,0,300,180" href="tables.html">
+    </map>
+
+    <!-- ISSUE: object-alt — object with no text alternative -->
+    <object data="../assets/photo.svg" type="image/svg+xml" width="100"></object>
+
+    <!-- OK: decorative image correctly hidden (should PASS) -->
+    <img src="../assets/photo.svg" width="40" alt="" role="presentation">
+  </main>
+</body>
+</html>

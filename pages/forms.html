@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Forms - Acme Travel</title>
+  <link rel="stylesheet" href="../assets/styles.css">
+</head>
+<body>
+  <header class="topbar"><a href="../index.html">Home</a></header>
+  <main>
+    <h1>Book a flight</h1>
+
+    <form id="booking" novalidate>
+      <!-- ISSUE: label — input with no label, placeholder only -->
+      <p><input type="text" name="fullname" placeholder="Full name"></p>
+
+      <!-- ISSUE: label — visible text not programmatically associated -->
+      <p>Email address<br><input type="email" name="email"></p>
+
+      <!-- ISSUE: autocomplete-valid — invalid autocomplete token -->
+      <p><label for="phone">Phone</label><br>
+        <input id="phone" type="tel" name="phone" autocomplete="telephone-number"></p>
+
+      <!-- ISSUE: label for points to a non-existent id -->
+      <p><label for="dob-field">Date of birth</label><br>
+        <input id="dob" type="date" name="dob"></p>
+
+      <!-- ISSUE: select-name — select with no accessible name -->
+      <p>From:<br>
+        <select name="from">
+          <option>New York (JFK)</option>
+          <option>London (LHR)</option>
+          <option>Lisbon (LIS)</option>
+          <option>Tokyo (HND)</option>
+        </select></p>
+
+      <!-- ISSUE: radios not grouped in fieldset/legend -->
+      <p>Cabin class:</p>
+      <input type="radio" id="c1" name="cabin" value="economy"><label for="c1">Economy</label>
+      <input type="radio" id="c2" name="cabin" value="business"><label for="c2">Business</label>
+      <input type="radio" id="c3" name="cabin" value="first"><label for="c3">First</label>
+
+      <!-- ISSUE: required indicated only by a red asterisk (color), no aria-required/required -->
+      <p><label for="passport">Passport number <span class="error-red">*</span></label><br>
+        <input id="passport" type="text" name="passport"></p>
+
+      <!-- ISSUE: label — textarea unlabelled -->
+      <p><textarea name="notes" rows="3" cols="40"></textarea></p>
+
+      <!-- ISSUE: multiple labels for one field -->
+      <p><label for="promo">Promo</label> <label for="promo">code</label><br>
+        <input id="promo" type="text" name="promo"></p>
+
+      <!-- ISSUE: checkbox with no label -->
+      <p><input type="checkbox" name="terms"> I agree to the terms</p>
+
+      <!-- ISSUE: input-button-name — empty value on submit button -->
+      <input type="submit" value="">
+      <!-- ISSUE: button-name — icon-only button with no text -->
+      <button type="button" style="background:#2b6cb0;border:0;padding:6px"><img src="../assets/icon-search.svg"></button>
+    </form>
+
+    <!-- ISSUE: error messages conveyed by color only, not linked to fields, not announced -->
+    <div id="errors" class="error-red" style="display:none">Please fix the highlighted fields.</div>
+  </main>
+
+  <script>
+    document.getElementById('booking').addEventListener('submit', function (e) {
+      e.preventDefault();
+      document.querySelectorAll('#booking input[type=text], #booking input[type=email]').forEach(function (el) {
+        if (!el.value) el.style.borderColor = 'red';
+      });
+      document.getElementById('errors').style.display = 'block';
+    });
+  </script>
+</body>
+</html>

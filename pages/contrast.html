@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Contrast - Acme Travel</title>
+  <link rel="stylesheet" href="../assets/styles.css">
+  <style>
+    .link-no-underline a { color: #333; text-decoration: none; }
+  </style>
+</head>
+<body>
+  <header class="topbar"><a href="../index.html">Home</a></header>
+  <main>
+    <h1>Color contrast samples</h1>
+
+    <!-- ISSUE: color-contrast — #b5b5b5 on white (~2.0:1) -->
+    <p class="low-contrast">Free cancellation within 24 hours of booking.</p>
+
+    <!-- ISSUE: color-contrast — white on yellow (~1.5:1) -->
+    <p><span class="light-on-yellow">Limited offer</span></p>
+
+    <!-- ISSUE: color-contrast — small grey text (~2.8:1) -->
+    <p class="tiny-grey">Prices include taxes and fees. Baggage charges may apply.</p>
+
+    <!-- ISSUE: color-contrast — inline styles -->
+    <p style="color:#7fa7d9;background:#a9c8ee">Light blue on light blue status message.</p>
+    <button style="color:#ccc;background:#eee;border:1px solid #ddd;padding:8px">Continue</button>
+
+    <!-- ISSUE: color-contrast on placeholder-like hint -->
+    <p><label for="city">City</label><br>
+      <input id="city" type="text" style="color:#c8c8c8" value="e.g. Paris"></p>
+
+    <!-- ISSUE: link-in-text-block — links distinguished only by low-contrast color -->
+    <p class="link-no-underline">Read our <a href="#">baggage policy</a> and <a href="#">refund rules</a> before you travel.</p>
+
+    <!-- ISSUE: information conveyed by color alone -->
+    <h2>Flight status</h2>
+    <ul>
+      <li class="success-green">AC 845</li>
+      <li class="error-red">BA 117</li>
+      <li class="success-green">LH 400</li>
+    </ul>
+
+    <!-- OK: passes AA (should PASS) -->
+    <p style="color:#1a1a1a">This sentence has sufficient contrast.</p>
+  </main>
+</body>
+</html>
