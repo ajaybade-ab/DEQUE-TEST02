@@ -24,7 +24,7 @@ export const AllStatuses = {
 
 export const Inaccessible = { args: { label: 'Badge', accessible: false } };
 
-export const Errored: Story = {
+export const Errored = {
   args: {
     size: 'small',
     label: 'Button',
