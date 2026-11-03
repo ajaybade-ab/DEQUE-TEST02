@@ -26,3 +26,13 @@ export default {
 export const Default = {};
 
 export const Inaccessible = { args: { accessible: false } };
+
+export const Errored = {
+  args: {
+    size: 'small',
+    label: 'Button',
+  },
+  render: () => {
+    throw new Error('oops');
+  },
+};
